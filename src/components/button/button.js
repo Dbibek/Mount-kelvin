@@ -24,7 +24,15 @@ const Button = () => {
 
   let handleOff = (e) => {
     e.preventDefault();
-    
+    Axios.post(apiUrl, {
+      id: "allOff",
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     console.log("Lights Off");
   };
 
@@ -32,6 +40,20 @@ const Button = () => {
 
   let handleLowerLight = (e) => {
     e.preventDefault();
+    Axios.post(apiUrl, {
+      id: "578e7d3b-7d4e-4b00-ae65-e0a14c3ac45d",
+      state: {
+        on: true,
+        bri: 157,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
     console.log("70 % dim");
   };
 
@@ -39,6 +61,19 @@ const Button = () => {
 
   let handleLesserLight = (e) => {
     e.preventDefault();
+    Axios.post(apiUrl, {
+      id: "578e7d3b-7d4e-4b00-ae65-e0a14c3ac45d",
+      state: {
+        on: true,
+        bri: 68,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     console.log("30% lights");
   };
