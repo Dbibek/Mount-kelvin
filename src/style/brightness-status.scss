@@ -1,0 +1,31 @@
+@import './color-definition.scss';
+
+.button-div {
+    button {
+        &::before {
+            content: " ";
+            height: 20px;
+            border: 3px solid $white;
+            width: 20px;
+            border-radius: 50%;
+            display: block;
+            position: relative;
+            left: calc(50% - 10px);
+        }
+        &.on::before{
+            background-color: $white;
+        }
+        &.on-70::before{
+            background: linear-gradient(to bottom, $primary-main 40%, $white 0px, $white);
+        }
+        &.on-30::before{
+            background: linear-gradient(to bottom, $primary-main 60%, $white 0px, $white);
+        }
+        &.off::before{
+            background: $primary-main;
+        }
+    p{
+        margin-top: 5px;
+    }
+    }
+}
