@@ -1,4 +1,4 @@
-import Button from "./components/button/button";
+import Buttons from "./components/button/buttons";
 import Data from "./components/header/header.js";
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className="container">
         <Data />
-        <Button />
+        <Buttons />
       </div>
     </div>
   );
